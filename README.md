@@ -1,1 +1,1 @@
-Some spiders example write some languages.
+Some spider examples write in some languages.
