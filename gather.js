@@ -102,7 +102,7 @@ function gather(urlString) {
         res.on('end', () => {
           try {
             // Just retry 3 times
-            retry[filename] = typeof retry[filename]===undefined?0:retry[filename];
+            retry[filename] = retry[filename]===undefined?0:retry[filename];
             if(!isImage(new Buffer(rawData, 'binary')) && retry[filename] < 3) {
               console.log(`${filename} is not received completely!`);
               retry[filename]++;
