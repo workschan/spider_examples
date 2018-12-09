@@ -12,7 +12,7 @@ async def fetch(session, url):
 			return await response.read()
 		# may be aiohttp.client_exceptions.ClientPayloadError
 		except:
-			return fetch(session, url)
+			return await fetch(session, url)
 
 async def download(url):
 	o = parse.urlparse(url)
