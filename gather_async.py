@@ -33,26 +33,6 @@ async def download(url):
 		f = open(o.netloc + '/' + filename, 'wb')
 		f.write(content)
 
-'''
-async def download(url):
-	o = parse.urlparse(url)
-
-	if not os.path.isdir(o.netloc):
-	  os.mkdir(o.netloc)
-	  
-	filename = o.path.replace('/', '_')
-	headers = {    
-	#伪装一个chrome浏览器    
-	"User-Agent":'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
-	}
-	req = request.Request(url=url, headers=headers)
-
-	with request.urlopen(req) as response:
-	  f = open(o.netloc + '/' + filename, 'wb')
-	  f.write(response.read())
-	  
-	  '''
-
 if __name__ =='__main__':	  
 	
 	loop = asyncio.get_event_loop()
